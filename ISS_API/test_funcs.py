@@ -62,6 +62,10 @@ def location_transformation():
     return pass_test_input, fail_test_input, pass_expected_output
 
 
+def test_always_passes():
+    assert True
+
+
 def test_get_location():
     pass_test_input, fail_test_input, pass_expected_output = location_transformation()
     assert get_location_data(pass_test_input) == pass_expected_output
@@ -76,3 +80,4 @@ def test_process_request():
     assert process_request("location") == 'location'
     assert process_request("people") == 'people'
     assert process_request("passover") == 'passover'
+
