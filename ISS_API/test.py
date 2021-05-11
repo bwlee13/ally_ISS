@@ -72,3 +72,7 @@ def test_fail_to_connect_to_api():
     assert get_location_data(fail_test_input) == "Error connecting to API"
 
 
+def test_process_request():
+    assert process_request("location") == 'location'
+    assert process_request("people") == 'people'
+    assert process_request("passover") == 'passover'
